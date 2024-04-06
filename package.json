@@ -1,0 +1,92 @@
+{
+  "name": "@libreforge/libreforge-general-designer-demo",
+  "version": "1.0.0",
+  "private": true,
+  "proxy": "http://localhost:8080",
+  "dependencies": {
+    "@libreforge/libreforge-designer": "^1.0.7",
+    "@libreforge/libreforge-framework": "^1.0.8",
+    "@libreforge/librepackage-payment-stripe": "^1.0.3",
+    "@libreforge/librepackage-security-oauth2-google": "^1.0.0",    
+    "@chakra-ui/icons": "^2.1.1",
+    "@chakra-ui/react": "^2.8.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@reach/combobox": "^0.18.0",
+    "@rematch/core": "^2.2.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/inversify": "^2.0.33",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.52",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@types/react-select": "^5.0.1",
+    "@types/reflect-metadata": "^0.1.0",
+    "browser-fs-access": "^0.35.0",
+    "codesandbox": "^2.2.3",
+    "coloreact": "^0.3.2",
+    "framer-motion": "^10.16.4",
+    "husky": "^8.0.3",
+    "inversify": "^6.0.1",
+    "lint-staged": "^14.0.1",
+    "lodash": "^4.17.21",
+    "prettier": "^3.0.3",
+    "prism-react-renderer": "^1.3.5",
+    "react": "^18.2.0",
+    "react-dnd": "^13.1.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "^18.2.0",
+    "react-hotkeys-hook": "^4.4.1",
+    "react-icons": "^4.11.0",
+    "react-redux": "^8.1.2",
+    "react-scripts": "5.0.1",
+    "react-split-pane": "^0.1.92",
+    "redux": "^4.2.1",
+    "redux-persist": "^6.0.0",
+    "redux-undo": "^1.1.0",
+    "reflect-metadata": "^0.1.13",
+    "typescript": "^4.9.5",
+    "uuid": "^9.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start-local": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@types/uuid": "^9.0.5"
+  }
+}
