@@ -15,6 +15,9 @@ import { bindProviders as securityBindProviders } from '@libreforge/librepackage
 import { App, store, theme, AppErrorBoundary } from '@libreforge/libreforge-designer';
 import { Provider } from 'react-redux';
 import { ChakraProvider } from '@chakra-ui/react';
+import json from '../package.json';
+
+document.title = `Designer Demo (${json.version})`;
 
 const container = new Container();
 container.bind<AbstractAuthorizationConfigProvider>(SYMBOL_AUTHORIZATION_CONFIG_PROVIDER).to(DefaultAuthorizationConfigProvider);
@@ -26,6 +29,7 @@ securityBindProviders(container);
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
+
 root.render(
   <React.StrictMode>
     <Provider store={store}>   
