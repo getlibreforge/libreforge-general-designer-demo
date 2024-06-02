@@ -29,11 +29,11 @@ const ImageManagerComponent: React.FC<ImageManagerComponentProps> = ({ attribute
     <Modal onClose={onClose} isOpen={isOpen} isCentered>
       <ModalOverlay>
         <ModalContent>
-          <ModalHeader>Save this component</ModalHeader>
+          <ModalHeader>Image Gallery</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <FormControl isInvalid={false}>
-              <FormLabel>Component name</FormLabel>
+              <FormLabel>Source</FormLabel>
               <Input
                 size="md"
                 autoFocus
@@ -54,8 +54,8 @@ const ImageManagerComponent: React.FC<ImageManagerComponentProps> = ({ attribute
                 </FormErrorMessage>
               )} */}
               <FormHelperText>
-                This will name your component that you will see in the code
-                panel as a separated component.
+                This gallery allows you to upload the image file to an external location and 
+                select the image source among the files uploaded.
               </FormHelperText>
             </FormControl>
           </ModalBody>
