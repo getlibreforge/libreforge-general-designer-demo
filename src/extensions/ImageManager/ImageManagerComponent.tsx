@@ -46,13 +46,6 @@ const ImageManagerComponent: React.FC<ImageManagerComponentProps> = ({ attribute
                   onChange(attributeName, e.target.value);
                 }}
               />
-              {/* {!isValidComponentName && (
-                <FormErrorMessage>
-                  Component name must not contain space or special character, and name
-                  should not be already taken (including existing chakra-ui
-                  components).
-                </FormErrorMessage>
-              )} */}
               <FormHelperText>
                 This gallery allows you to upload the image file to an external location and 
                 select the image source among the files uploaded.
