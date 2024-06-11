@@ -12,12 +12,13 @@ import { CustomI18nLookupService } from './CustomI18nLookupService';
 import { DefaultAuthorizationConfigProvider } from './DefaultAuthorizationConfigProvider';
 import { bindProviders as stripeBindProviders } from '@libreforge/librepackage-payment-stripe';
 import { bindProviders as securityBindProviders } from '@libreforge/librepackage-security-oauth2-google';
-import { App, store, theme, AppErrorBoundary, AbstractImageManagerPlugin, SYMBOL_PLUGIN_IMAGE_MANAGER, SYMBOL_PLUGIN_BUSINESS_RULES_MANAGER, AbstractBusinessRulesManagerPlugin } from '@libreforge/libreforge-designer';
+import { App, store, theme, AppErrorBoundary, AbstractImageManagerPlugin, SYMBOL_PLUGIN_IMAGE_MANAGER, SYMBOL_PLUGIN_BUSINESS_RULES_MANAGER, AbstractBusinessRulesManagerPlugin, AbstractActionGroupManagerPlugin, SYMBOL_PLUGIN_ACTION_GROUP_MANAGER } from '@libreforge/libreforge-designer';
 import { Provider } from 'react-redux';
 import { ChakraProvider } from '@chakra-ui/react';
 import json from '../package.json';
 import { DefaultImageManagerPlugin } from 'extensions/ImageManager/ImageManagerPlugin';
 import { DefaultBusinessRulesManagerPlugin } from 'extensions/BusinessRulesManager/DefaultBusinessRulesManagerPlugin';
+import { DefaultActionGroupManagerPluginPlugin } from 'extensions/ActionGroupManager/DefaultActionGroupManagerPlugin';
 
 document.title = `Designer Demo (${json.version})`;
 
@@ -25,6 +26,7 @@ const container = new Container();
 container.bind<AbstractAuthorizationConfigProvider>(SYMBOL_AUTHORIZATION_CONFIG_PROVIDER).to(DefaultAuthorizationConfigProvider);
 container.bind<AbstractImageManagerPlugin>(SYMBOL_PLUGIN_IMAGE_MANAGER).to(DefaultImageManagerPlugin);
 container.bind<AbstractBusinessRulesManagerPlugin>(SYMBOL_PLUGIN_BUSINESS_RULES_MANAGER).to(DefaultBusinessRulesManagerPlugin);
+container.bind<AbstractActionGroupManagerPlugin>(SYMBOL_PLUGIN_ACTION_GROUP_MANAGER).to(DefaultActionGroupManagerPluginPlugin);
 
 frameworkBindProviders(container, CustomI18nLookupService);
 stripeBindProviders(container);
