@@ -60,6 +60,30 @@ const ActionGroupManagerComponent: React.FC<ActionGroupManagerComponentProps> = 
     onClose();
   }
 
+/*
+
+    // SELECTOR
+
+    export const getActionGroup = (nameOrId: string | IComponent['id']) =>  (state: RootState) => {
+      const selectedPage = state.pages.present.selectedPage
+      return state.pages.present.pages[selectedPage][nameOrId]?.actionGroup;
+    }    
+
+    // REDUCER
+
+    replaceActionGroup(
+      state: PagesState,
+      payload: { componentName: string; actionGroup: IActionGroup },
+    ) {
+      return produce(state, (draftState: PagesState) => {
+        const component = draftState.pages[draftState.selectedPage][payload.componentName];
+        component['actionGroup'] = payload.actionGroup;
+      });
+    },
+
+/*
+
+
   return (
     <Modal onClose={onClose} isOpen={isOpen} isCentered>
       <ModalOverlay>
