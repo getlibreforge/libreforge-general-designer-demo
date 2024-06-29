@@ -7,11 +7,11 @@ import ActionGroupManagerComponent from "./ActionGroupManagerComponent";
 @injectable()
 export class DefaultActionGroupManagerPluginPlugin extends AbstractActionGroupManagerPlugin {
 
-    getModal(componentName: string, onClose: () => void, isOpen: boolean, 
+    getModal(componentId: string, onClose: () => void, isOpen: boolean, 
             container: Container, dispatch: RematchDispatch<any>, sharedState: any): ReactNode {
 
         return (
-            <ActionGroupManagerComponent componentName={componentName} onClose={onClose} isOpen={isOpen} />
+            <ActionGroupManagerComponent componentId={componentId} onClose={onClose} isOpen={isOpen} />
         )
     }
 }
