@@ -4,7 +4,7 @@
   "private": true,
   "proxy": "http://localhost:8080",
   "dependencies": {
-    "@libreforge/libreforge-designer": "^1.0.66",
+    "@libreforge/libreforge-designer": "^1.0.67",
     "@libreforge/librepackage-security-oauth2-google": "^1.0.15",
     "@libreforge/librepackage-payment-stripe": "^1.0.15",
     "@chakra-ui/icons": "^2.1.1",
