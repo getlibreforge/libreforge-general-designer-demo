@@ -8,6 +8,7 @@ import {
   bindProviders as frameworkBindProviders,
   InversifyContainerProviderContext
 } from '@libreforge/libreforge-framework';
+import { bindProviders as componentBindProviders } from '@libreforge/libreforge-framework-react';
 import { CustomI18nLookupService } from './CustomI18nLookupService';
 import { DefaultAuthorizationConfigProvider } from './DefaultAuthorizationConfigProvider';
 import { bindProviders as stripeBindProviders } from '@libreforge/librepackage-payment-stripe';
@@ -29,6 +30,8 @@ container.bind<AbstractBusinessRulesManagerPlugin>(SYMBOL_PLUGIN_BUSINESS_RULES_
 container.bind<AbstractActionGroupManagerPlugin>(SYMBOL_PLUGIN_ACTION_GROUP_MANAGER).to(DefaultActionGroupManagerPluginPlugin);
 
 frameworkBindProviders(container, CustomI18nLookupService);
+componentBindProviders(container);
+
 stripeBindProviders(container);
 securityBindProviders(container);
 
